@@ -1,4 +1,4 @@
- #volume 8Gib on zone us-east-1a with tag ebs-volume
+ #security group allow trafic in 80 443 and 22
  resource "aws_security_group" "security_group" {
     name = var.security_group_name
     description = "Rules for the module mini terraform"
