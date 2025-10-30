@@ -1,5 +1,5 @@
  resource "aws_ebs_volume" "ebs_volume" {
-   availability_zone = "us-east-1a"
-   size = "52"
-   tags = "test"
+   availability_zone = var.ebs_zone
+   size = var.ebs_size
+   tags = var.ebs_tag
  }
