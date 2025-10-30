@@ -7,7 +7,6 @@ module "sg" {
 module "ec2" {
     source = "../modules/ec2"
     instance_type = var.instance_type
-    ami = var.ami
     key_name = var.key_name
     security_group_name = module.sg.security_group.security_group_id
     tags = var.instance_tag
@@ -22,13 +21,8 @@ module "eip" {
 module "ebs" {
     source = "../modules/ebs"
     ebs_zone = var.ebs_zone
-    size = var.ebs_size
-    tags = var.ebs_tag
-}
-
-resource "aws_eip_association" "eip_association" {
-  instance_id =
-  allocation_id = 
+    ebs_size = var.ebs_size
+    ebs_tag = var.ebs_tag
 }
 
 resource "aws_eip_association" "eip_association" {

@@ -37,16 +37,3 @@ variable "ebs_tag" {
 variable "eip_tag" {
   
 }
-
-
-
-  instance_id =
-  allocation_id = 
-
-  instance_id =
-  allocation_id = 
-
-  device_name = "dev/sdh"
-  volume_id
-  instance_id
-
